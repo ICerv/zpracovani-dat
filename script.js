@@ -143,4 +143,35 @@ const personsWithGenderClass = persons.map(person => ({
 }));
 console.log(personsWithGenderClass)
 
+// ZPRACOVANI DAT
+// Pomocí metody forEach napište cyklus, který vypíše do konzole poslední písmeno z každého jména v poli names.
+
+names.forEach((name) => {
+  console.log(name.slice(-1))
+});
+
+// Pomocí metody filter získejte z pole names pouze ta jména, která jsou delší než 4 znaky.
+
+names.filter((name) => {
+  console.log(name.length > 4)
+})
+
+// Pomocí metody filter získejte z pole persons pouze dospělé muže.
+
+persons.filter((person) => {
+  console.log(person.gender === 'male' && person.age >= 18)
+})
+
+// Pomocí metody every zjistěte, jestli v poli persons platí, že každá zletilá osoba je vždy buď muž nebo žena (tedy že vlastnost gender má hodnotu male nebo hodnotu female).
+
+persons.every((person) => {
+  console.log(person.gender === 'male' || person.gender === 'female')
+})
+
+// Pomocí metody forEach napište cyklus, který spočítá průměr čísel v poli numbers.
+let sum = 0;
+numbers.forEach((number) => { sum += number });
+const average = sum / numbers.length;
+console.log(average)
+
 
